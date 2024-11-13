@@ -96,17 +96,24 @@ function salvarAmigo($amigo, $fone)
 function listarAmigos()
 {
     $amigos = carregarAmigos();
-    echo "<ul>";
+    echo "<table>";
+
+    echo "<tr> <th>Nome</th>
+    <th>Fone</th>
+    <th>Ação</th> </tr>";
 
     foreach ($amigos as $index => $amg) {
-        echo "<li>" . htmlspecialchars($amg["amigo"]) .
-            "<a href='cadAmigos.php?excluir=" . $index . "'> Excluir </a> | " .
-            "<a href='alterar.php?editar=" . $index . "'> Alterar </a></li>";
+        echo "<tr> <td>" . htmlspecialchars($amg["amigo"]) . "</td>
+        <td>" . htmlspecialchars($amg["fone"]) . "</td> 
+        <td><a href='cadAmigos.php?excluirAmigo=" . $index . "'> Excluir </a> | " .
+            "<a href='alterar.php?editar=" . $index . "'> Alterar </a></td></tr>";
     }
-    echo "</ul>";
+    echo "</table>";
 }
 
 //EXCLUI DA LISTA DE AMIGOS
+
+//NÃO ESTÁ FUNCIONANDO
 function excluirAmigo($index)
 {
     $amigos = carregarAmigos();
@@ -119,6 +126,7 @@ function excluirAmigo($index)
     }
 }
 
+//NÃO ESTÁ FUNCIONANDO
 function alterarAmigo($index, $novoAmigo, $novoFone)
 {
     $amigo = carregarAmigos();

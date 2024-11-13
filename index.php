@@ -1,4 +1,7 @@
 <?php
+
+    include "funcoes.php";
+
 if (isset($_COOKIE['usuario_logado'])) {
     $usuario = htmlspecialchars($_COOKIE['usuario_logado']);
 } else {
@@ -23,12 +26,12 @@ if (isset($_COOKIE['usuario_logado'])) {
 
         <strong>AGENDA</strong>
 
-        <button>Cadastrar</button>
+        <a href="./cadAmigos.php">Cadastrar</a>
 
     </header>
 
     <h1>Bem-vindo, <?php echo $usuario; ?>!</h1>
-    <!-- <p>Você está autenticado no sistema.</p> -->
+    <?php listarAmigos(); ?>
 
     <form method="post" action="logout.php">
         <button type="submit">Sair</button>
