@@ -36,18 +36,25 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Login</title>
+        <link rel="stylesheet" href="style.css">
     </head>
-    <body>
+    <body id="telaLogin">
 
-    <h2>Login de Usuário</h2>
+    <main id="conteudo">
+    <h2 id="titleLogin">Login de Usuário</h2>
 
-    <form action="login.php" method="post">
-        <input type="text" name="usuario" id="usuario" placeholder="Digite seu usuario">
+    <form action="login.php" method="POST" id="formLogin">
+        <input type="text" name="usuario" id="usuario" placeholder="Digite seu usuário">
         <input type="password" name="senha" id="senha" placeholder="Digite a senha"required>
 
         <button type="submit">Entrar</button>
     </form>
+
+    <div id="cadUsu">
     <a href="cadastro.php">Não tem cadastro? Clique aqui!</a>
-        
+    </div>    
+
+    </main>
+
     </body>
     </html>

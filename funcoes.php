@@ -106,7 +106,7 @@ function listarAmigos()
         echo "<tr> <td>" . htmlspecialchars($amg["amigo"]) . "</td>
         <td>" . htmlspecialchars($amg["fone"]) . "</td> 
         <td><a href='cadAmigos.php?excluirAmigo=" . $index . "'> Excluir </a> | " .
-            "<a href='alterar.php?editar=" . $index . "'> Alterar </a></td></tr>";
+            "<a href='alterarAmigo.php?editar=" . $index . "'> Alterar </a></td></tr>";
     }
     echo "</table>";
 }
@@ -117,6 +117,7 @@ function listarAmigos()
 function excluirAmigo($index)
 {
     $amigos = carregarAmigos();
+   
     if (isset($amigos[$index])) {
         unset($amigos[$index]);
         file_put_contents("amigos.txt", "");
@@ -131,7 +132,7 @@ function alterarAmigo($index, $novoAmigo, $novoFone)
 {
     $amigo = carregarAmigos();
     if (isset($amigo[$index])) {
-        $amigo[$index] = ["amigos" => $novoAmigo, "fone", $novoFone];
+        $amigo[$index] = ["amigo" => $novoAmigo, "fone" => $novoFone];
         file_put_contents("amigos.txt", "");
         foreach ($amigo as $amg) {
             salvarAmigo($amg["amigo"], $amg["fone"]);

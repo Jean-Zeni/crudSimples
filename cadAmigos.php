@@ -7,13 +7,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["amigo"]) && isset($_PO
     $novoFone = $_POST["fone"];
     salvarAmigo($novoAmigo, $novoFone);
     echo "Nova amizade cadastrada com sucesso!";
+    header("Location:index.php");
 }
 
 //Processa exclusão da amizade
-if (isset($_GET["excluir"])) {
-    $index = $_GET["excluir"];
+if (isset($_GET["excluirAmigo"])) {
+    $index = $_GET["excluirAmigo"];
+    
     excluirAmigo($index);
-    header("Location:cadAmigos.php");
+    header("Location:index.php");
     exit;
 }
 
@@ -32,7 +34,7 @@ if (isset($_GET["excluir"])) {
 
     <h2>Cadastrar Amizade</h2>
 
-    <form action="cadAmigos.php" method="post">
+    <form  method="POST">
         <input type="text" name="amigo" id="amigo" placeholder="amigo" required>
         <br>
 
