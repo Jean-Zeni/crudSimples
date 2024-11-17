@@ -41,13 +41,18 @@
     <body id="telaLogin">
 
     <main id="conteudo">
+
+    <div id="tituloELogo">
     <h2 id="titleLogin">Login de Usuário</h2>
+    </div>
 
     <form action="login.php" method="POST" id="formLogin">
+        <label for="usuario">Usuário:</label>
         <input type="text" name="usuario" id="usuario" placeholder="Digite seu usuário">
+        <label for="senha">Senha:</label>
         <input type="password" name="senha" id="senha" placeholder="Digite a senha"required>
 
-        <button type="submit">Entrar</button>
+        <button id="acessar" type="submit">Entrar</button>
     </form>
 
     <div id="cadUsu">

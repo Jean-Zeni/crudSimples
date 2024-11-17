@@ -28,9 +28,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["usuario"]) && isset($_
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alterar Usuário</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body id="altUsu">
 
     <h2>Alterar Usuário</h2>
 

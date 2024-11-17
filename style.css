@@ -2,7 +2,7 @@
 
 /* Estilização para mobile */
 
-@media(max-width: 600px){
+/* @media(max-width: 600px){
 
     #titleLogin {
         text-align: center;
@@ -67,45 +67,415 @@
         display: flex;
         justify-content: center;
     }
-}
+} */
 
 /* Estilização para desktop */
-@media(min-width: 601px){
-#titleLogin {
-    text-align: center;
-}
+@media(min-width: 601px) {
 
-#telaLogin {
-    font-family: "Nunito", sans-serif;
-    font-style: normal;
-}
+    /* ESTILIZAÇÃO DA TELA DE LOGIN */
 
-#formLogin{
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-
-    #usuario{
+    /* ================================================================================================================ */
+    #titleLogin {
         text-align: center;
-        width: 500px;
-        align-self: center;
+        font-size: 40px;
     }
 
-    #senha{
+    #telaLogin {
+        background-image: url('./imgs/lago.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-family: "Nunito", sans-serif;
+        font-style: normal;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+
+        label {
+            font-size: 30px;
+            font-family: "Nunito", sans-serif;
+            font-style: normal;
+            font-weight: bold;
+        }
+    }
+
+    #conteudo {
+        margin-top: 60px;
+        background-color: rgba(255, 255, 255, 0.623);
+        border-top-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+        width: 600px;
+    }
+
+    #formLogin {
+        padding: 30px;
         text-align: center;
-        width: 500px;
-        align-self: center;
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+
+        #usuario {
+            font-size: 25px;
+            border-radius: 50px;
+            text-align: center;
+            width: 500px;
+            align-self: center;
+        }
+
+        #senha {
+            font-size: 25px;
+            border-radius: 50px;
+            text-align: center;
+            width: 500px;
+            align-self: center;
+        }
+
+        #acessar {
+            font-size: 20px;
+            color: white;
+            background-color: rgb(3, 175, 46);
+            border-radius: 50px;
+            width: 100px;
+            align-self: center;
+        }
+
+        #acessar:hover {
+            background-color: purple;
+            transition: background-color 0.15s ease-in-out;
+            cursor: pointer;
+        }
     }
 
-    button{
-        width: 50px;
-        align-self: center;
+    #cadUsu {
+        display: flex;
+        justify-content: center;
+        padding: 30px;
+        font-size: 23px;
     }
-}
 
-#cadUsu{
-    display: flex;
-    justify-content: center;
-}
+    /* FIM DA ESTILIZAÇÃO DA TELA DE LOGIN */
+    /* ================================================================================================================ */
 
+
+    /* ESTILIZAÇÃO DO INDEX */
+    /* ================================================================================================================ */
+
+    #telaIndex {
+        font-size: 30px;
+        background-image: url('./imgs/lago.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-family: "Nunito", sans-serif;
+        font-style: normal;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #cabecalho {
+        background-color: rgba(255, 255, 255, 0.623);
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        padding: 12px;
+        padding-bottom: 0;
+    }
+
+    #tabela {
+        display: flex;
+        flex-direction: column;
+        padding: 25px;
+        background-color: rgba(255, 255, 255, 0.623);
+        border-top-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+
+        td {
+            border-style: solid;
+            border-width: 2px;
+            border-color: black;
+        }
+
+        th {
+            border-style: solid;
+            border-width: 2px;
+            border-color: black;
+        }
+
+        button {
+            background-color: rgb(155, 0, 0);
+            color: white;
+            font-size: 20px;
+            width: 100px;
+            border-radius: 50px;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: purple;
+            transition: background-color 0.15s ease-in-out;
+            cursor: pointer;
+        }
+    }
+
+    /* FIM DA ESTILIZAÇÃO DO INDEX */
+    /* ================================================================================================================ */
+
+    /* ESTILIZAÇÃO DA TELA DE CADASTRO DE AMIGOS */
+    /* ================================================================================================================ */
+
+    #telaCadAmigos {
+        font-size: 30px;
+        background-image: url('./imgs/lago.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-family: "Nunito", sans-serif;
+        font-style: normal;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    #titleCadAmigo {
+        font-size: 23px;
+        padding: 10px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        margin-bottom: 0;
+        background-color: rgba(255, 255, 255, 0.623);
+    }
+
+    #formCadAmigo {
+        background-color: rgba(255, 255, 255, 0.623);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        border-top-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+
+        label {
+            font-size: 30px;
+            font-family: "Nunito", sans-serif;
+            font-style: normal;
+            font-weight: bold;
+        }
+
+        input {
+            font-size: 25px;
+            border-radius: 50px;
+            text-align: center;
+        }
+
+        button {
+            background-color: whitesmoke;
+            border-radius: 50px;
+            font-size: 25px;
+            width: 150px;
+
+        }
+
+        button:hover {
+            background-color: purple;
+            transition: background-color 0.15s ease-in-out;
+            cursor: pointer;
+        }
+    }
+
+    /* FIM DA ESTILIZAÇÃO DA TELA DE CADASTRO DE AMIZADES */
+    /* ================================================================================================================ */
+
+    /* ESTILIZAÇÃO DA TELA DE CADASTRO DE USUÁRIOS */
+    /* ================================================================================================================ */
+
+    #telaCadUsu {
+        font-size: 30px;
+        background-image: url('./imgs/lago.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-family: "Nunito", sans-serif;
+        font-style: normal;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+
+        #titleCadUsu {
+            background-color: rgba(255, 255, 255, 0.623);
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+            padding-bottom: 0;
+            margin-bottom: 0;
+            font-size: 21px;
+        }
+
+        #formCadUsu {
+            background-color: rgba(255, 255, 255, 0.623);
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            border-top-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+
+            input {
+                font-size: 25px;
+                border-radius: 50px;
+                text-align: center;
+            }
+
+            button {
+                background-color: whitesmoke;
+                border-radius: 50px;
+                font-size: 25px;
+                width: 150px;
+            }
+
+            button:hover {
+                background-color: purple;
+                transition: background-color 0.15s ease-in-out;
+                cursor: pointer;
+            }
+        }
+
+        a:visited {
+            color: red;
+        }
+    }
+
+    /* FIM DA ESTILIZAÇÃO DA TELA DE CADASTRO DE NOVOS USUÁRIOS */
+    /* ================================================================================================================ */
+
+    /* ESTILIZAÇÃO DA TELA DE EDIÇÃO DE USUÁRIOS*/
+    /* ================================================================================================================ */
+
+    #altUsu {
+
+        font-size: 30px;
+        background-image: url('./imgs/lago.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-family: "Nunito", sans-serif;
+        font-style: normal;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+
+        h2{
+            background-color: rgba(255, 255, 255, 0.623);
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+            padding-bottom: 0;
+            margin-bottom: 0;
+            font-size: 30px;
+        }
+
+        form{
+
+            display: flex;
+            flex-direction: column;
+            background-color: rgba(255, 255, 255, 0.623);
+            padding: 20px;
+            border-top-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+
+
+            label {
+                font-size: 30px;
+                font-family: "Nunito", sans-serif;
+                font-style: normal;
+                font-weight: bold;
+            }
+
+            input {
+                font-size: 25px;
+                border-radius: 50px;
+                text-align: center;
+            }
+
+            button {
+                background-color: whitesmoke;
+                border-radius: 50px;
+                font-size: 25px;
+                width: 220px;
+                margin-top: 20px;
+            }
+
+            button:hover {
+                background-color: purple;
+                transition: background-color 0.15s ease-in-out;
+                cursor: pointer;
+            }
+        }
+
+    }
+    /* FIM DA ESTILIZAÇÃO DA TELA DE ALTERAÇÃO DE DADOS DO USUÁRIO */
+    /* ================================================================================================================ */
+
+    /* ESTILIZAÇÃO DA TELA DE EDIÇÃO DE DADOS DE AMIGOS */
+    /* ================================================================================================================ */
+
+    #telaAltAmigo{
+        font-size: 30px;
+        background-image: url('./imgs/lago.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-family: "Nunito", sans-serif;
+        font-style: normal;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+
+        form{
+            background-color: rgba(255, 255, 255, 0.623);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            border-top-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+        }
+
+        button{
+            margin-top: 15px;
+        }
+
+        label {
+            font-size: 30px;
+            font-family: "Nunito", sans-serif;
+            font-style: normal;
+            font-weight: bold;
+        }
+
+        input {
+            font-size: 25px;
+            border-radius: 50px;
+            text-align: center;
+        }
+
+        button {
+            background-color: whitesmoke;
+            border-radius: 50px;
+            font-size: 25px;
+            width: 220px;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: purple;
+            transition: background-color 0.15s ease-in-out;
+            cursor: pointer;
+        }
+
+        h2{
+            background-color: rgba(255, 255, 255, 0.623);
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+            padding-bottom: 0;
+            margin-bottom: 0;
+            font-size: 23px;
+        }
+    }
 }

@@ -57,7 +57,7 @@ function alterarUsuario($index, $novoUsuario, $novaSenha)
 {
     $usuario = carregarUsuarios();
     if (isset($usuario[$index])) {
-        $usuario[$index] = ["usuarios" => $novoUsuario, "senha", $novaSenha];
+        $usuario[$index] = ["usuario" => $novoUsuario, "senha" => $novaSenha];
         file_put_contents("usuarios.txt", "");
         foreach ($usuario as $user) {
             salvarUsuario($user["usuario"], $user["senha"]);
@@ -105,8 +105,8 @@ function listarAmigos()
     foreach ($amigos as $index => $amg) {
         echo "<tr> <td>" . htmlspecialchars($amg["amigo"]) . "</td>
         <td>" . htmlspecialchars($amg["fone"]) . "</td> 
-        <td><a href='cadAmigos.php?excluirAmigo=" . $index . "'> Excluir </a> | " .
-            "<a href='alterarAmigo.php?editar=" . $index . "'> Alterar </a></td></tr>";
+        <td><a href='cadAmigos.php?excluirAmigo=" . $index . "'> <img src='./imgs/bin.png' alt='apagar'></a>    " .
+            "   <a href='alterarAmigo.php?editar=" . $index . "'><img src='./imgs/pen.png' alt='editar'></a></td></tr>";
     }
     echo "</table>";
 }

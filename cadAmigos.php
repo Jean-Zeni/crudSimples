@@ -28,16 +28,19 @@ if (isset($_GET["excluirAmigo"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar Novo Amigo</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body id="telaCadAmigos">
 
-    <h2>Cadastrar Amizade</h2>
+    <h2 id="titleCadAmigo">Cadastrar Amizade</h2>
 
-    <form  method="POST">
-        <input type="text" name="amigo" id="amigo" placeholder="amigo" required>
+    <form id="formCadAmigo" method="POST">
+        <label for="amigo">Nome:</label>
+        <input type="text" name="amigo" id="amigo" placeholder="nome" required>
         <br>
 
+        <label for="fone">Número:</label>
         <input type="number" name="fone" id="fone" placeholder="fone" required>
         <br>
         <button type="submit">Cadastrar</button>
